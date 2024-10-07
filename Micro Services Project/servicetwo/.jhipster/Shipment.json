@@ -1,0 +1,23 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "shipmentDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "trackingNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shipmentStatus",
+      "fieldType": "ShipmentStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PENDING,SHIPPED,IN_TRANSIT,DELIVERED,RETURNED"
+    }
+  ],
+  "name": "Shipment",
+  "relationships": []
+}
