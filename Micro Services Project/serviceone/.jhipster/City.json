@@ -1,0 +1,37 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "population",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "area",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "City",
+  "relationships": [
+    {
+      "otherEntityName": "governorate",
+      "relationshipName": "governorate",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "governorate",
+      "otherEntityRelationshipName": "cities",
+      "relationshipName": "governorate",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
